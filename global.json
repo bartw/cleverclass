@@ -1,0 +1,6 @@
+{
+    "projects":[
+        "CleverClass.Domain.Business",
+        "CleverClass.Domain.Contract"
+    ]
+}

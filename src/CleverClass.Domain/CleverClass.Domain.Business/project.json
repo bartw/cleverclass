@@ -5,6 +5,7 @@
     },
 
     "dependencies": {
+        "CleverClass.Domain.Contract": "1.0.0-*",
         "NETStandard.Library": "1.0.0-rc2-23704"
     },
 
