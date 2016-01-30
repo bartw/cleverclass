@@ -24,6 +24,7 @@ namespace CleverClass.Domain.Rest
         public static void Main(string[] args)
         {
             var host = new WebHostBuilder()
+                .UseServer("Microsoft.AspNetCore.Server.Kestrel")
                 .UseDefaultConfiguration(args)
                 .UseStartup<Startup>()
                 .Build();
