@@ -1,8 +1,9 @@
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.PlatformAbstractions;
 
 namespace CleverClass.Domain.Rest
 {
@@ -15,10 +16,11 @@ namespace CleverClass.Domain.Rest
 
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+            loggerFactory.AddConsole();
+            loggerFactory.AddDebug();
+            
+            app.UseIISPlatformHandler();
+            app.UseMvc();
         }
 
         public static void Main(string[] args)
