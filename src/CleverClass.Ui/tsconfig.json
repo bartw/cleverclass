@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "outDir": "wwwroot/app",
+    "target": "ES5",
+    "module": "system",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "removeComments": false,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true
+  },
+  "filesGlob": [
+    "app/**/*.ts"
+  ],
+  "files": [
+    "app/app.component.ts",
+    "app/boot.ts"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  }
+}

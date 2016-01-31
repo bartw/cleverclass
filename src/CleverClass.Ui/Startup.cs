@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.PlatformAbstractions;
+using System.IO;
 
 namespace CleverClass.Ui
 {
@@ -29,6 +30,7 @@ namespace CleverClass.Ui
         {
             var host = new WebHostBuilder()
                 .UseServer("Microsoft.AspNetCore.Server.Kestrel")
+                .UseApplicationBasePath(Directory.GetCurrentDirectory())
                 .UseDefaultConfiguration(args)
                 .UseIISPlatformHandlerUrl()
                 .UseStartup<Startup>()
