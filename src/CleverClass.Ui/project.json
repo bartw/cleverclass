@@ -1,14 +1,30 @@
 ﻿{
     "version": "1.0.0-*",
     "compilationOptions": {
-        "emitEntryPoint": true
+        "emitEntryPoint": true,
+        "preserveCompilationContext": true
     },
 
     "dependencies": {
-        "NETStandard.Library": "1.0.0-rc2-23704"
+        "CleverClass.Domain.Contract": "1.0.0-*",
+        "NETStandard.Library": "1.0.0-*",
+        "Microsoft.AspNetCore.Diagnostics": "1.0.0-*",
+        "Microsoft.AspNetCore.IISPlatformHandler": "1.0.0-*",
+        "Microsoft.AspNetCore.Mvc": "1.0.0-*",
+        "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-*",
+        "Microsoft.AspNetCore.StaticFiles": "1.0.0-*",
+        "Microsoft.Extensions.Logging": "1.0.0-*",
+        "Microsoft.Extensions.Logging.Console": "1.0.0-*",
+        "Microsoft.Extensions.Logging.Debug": "1.0.0-*"
+    },
+    
+    "commands": {
+        "web": "CleverClass.Ui"
     },
 
     "frameworks": {
-        "dnxcore50": { }
+        "dnxcore50": {
+            "imports": "portable-net45+win8"
+        }
     }
 }
