@@ -16,7 +16,8 @@
   ],
   "files": [
     "app/app.component.ts",
-    "app/boot.ts"
+    "app/boot.ts",
+    "app/classGroup.service.ts"
   ],
   "atom": {
     "rewriteTsconfig": true

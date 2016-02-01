@@ -12,7 +12,7 @@ namespace CleverClass.Ui
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddMvc();
+            services.AddMvc();
         }
 
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
@@ -23,7 +23,7 @@ namespace CleverClass.Ui
             app.UseIISPlatformHandler();
             app.UseDefaultFiles();
             app.UseStaticFiles();
-            //app.UseMvc();
+            app.UseMvc();
         }
 
         public static void Main(string[] args)
@@ -34,6 +34,7 @@ namespace CleverClass.Ui
                 .UseDefaultConfiguration(args)
                 .UseIISPlatformHandlerUrl()
                 .UseStartup<Startup>()
+                .UseUrls("http://localhost:5001")
                 .Build();
 
             host.Run();

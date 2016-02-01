@@ -1,4 +1,0 @@
-{
-    "server": "Microsoft.AspNetCore.Server.Kestrel",
-    "webroot": "wwwroot"
-}
